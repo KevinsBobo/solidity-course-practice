@@ -1,15 +1,10 @@
 import time
-from tracemalloc import start
-from async_timeout import timeout
 from brownie import MockV3Aggregator, VRFCoordinatorMock, LinkToken
 from web3 import Web3
 from brownie import network, config, accounts, Contract, interface, web3
 
 FORKED_LOCAL_ENVIRONMENTS = ["mainnet-fork", "mainnet-fork-dev"]
 LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["development", "ganache-local"]
-
-DECIMALS = 8
-STARTING_PRICE = 2000 * 10**8
 
 
 def get_account(index=None, id=None):

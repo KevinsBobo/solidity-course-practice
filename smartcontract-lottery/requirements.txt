@@ -1,0 +1,4 @@
+Brownie==0.5.1
+eth_brownie==1.17.2
+pytest==6.2.5
+web3==5.25.0
