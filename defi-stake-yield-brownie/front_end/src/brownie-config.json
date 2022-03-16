@@ -1,0 +1,49 @@
+{
+    "dependencies": [
+        "OpenZeppelin/openzeppelin-contracts@4.2.0",
+        "smartcontractkit/chainlink-brownie-contracts@0.2.1"
+    ],
+    "compiler": {
+        "solc": {
+            "remappings": [
+                "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.2.0",
+                "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.2.1"
+            ]
+        }
+    },
+    "dotenv": ".env",
+    "wallets": {
+        "from_key": "${PRIVATE_KEY}"
+    },
+    "networks": {
+        "default": "development",
+        "kovan": {
+            "verify": true,
+            "weth_token": "0xd0A1E359811322d97991E03f863a0C30C2cF029C",
+            "fau_token": "0xFab46E002BbF0b4509813474841E0716E6730136",
+            "dai_token": "0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD",
+            "link_token": "0xa36085F69e2889c224210F603D836748e7dC0088",
+            "dai_usd_price_feed": "0x777A68032a88E5A84678A77Af2CD65A7b3c0775a",
+            "eth_usd_price_feed": "0x9326BFA02ADD2366b30bacB125260Af641031331",
+            "link_usd_price_feed": "0x396c5E36DD0a0F5a5D33dae44368D4193f69a1F0"
+        },
+        "rinkeby": {
+            "verify": true
+        },
+        "mainnet-fork": {
+            "verify": false
+        },
+        "mainnet-fork-dev": {
+            "verify": false
+        },
+        "development": {
+            "verify": false
+        },
+        "ganache": {
+            "verify": false
+        },
+        "ganache-local": {
+            "verify": false
+        }
+    }
+}
